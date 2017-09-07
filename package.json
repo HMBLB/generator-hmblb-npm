@@ -1,0 +1,41 @@
+{
+  "name": "generator-hmblb-packagegenerator-hmblb-npm",
+  "version": "0.0.0-development",
+  "description": "Yeoman generator for creating and pubishing npm packages.",
+  "main": "src/index",
+  "scripts": {
+    "setup": "npm-run-all setup:*",
+    "setup:semantic-release": "semantic-release-cli setup",
+    "setup:commitizen": "commitizen init cz-conventional-changelog --save-dev --save-exact",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "cz-commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HMBLB/generator-hmblb-npm.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "John Persson <john.persson@humblebee.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HMBLB/generator-hmblb-npm/issues"
+  },
+  "homepage": "https://github.com/HMBLB/generator-hmblb-npm#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.1",
+    "semantic-release": "^7.0.2",
+    "semantic-release-cli": "^3.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
